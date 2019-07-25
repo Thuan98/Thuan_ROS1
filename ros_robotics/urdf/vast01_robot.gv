@@ -1,0 +1,32 @@
+digraph G {
+node [shape=box];
+"base_link" [label="base_link"];
+"between_top_cylinder" [label="between_top_cylinder"];
+"hold_box1" [label="hold_box1"];
+"hold_box2" [label="hold_box2"];
+"left_bottom_cylinder" [label="left_bottom_cylinder"];
+"left_bottom_wheel" [label="left_bottom_wheel"];
+"left_top_wheel" [label="left_top_wheel"];
+"right_bottom_cylinder" [label="right_bottom_cylinder"];
+"right_bottom_wheel" [label="right_bottom_wheel"];
+"right_top_wheel" [label="right_top_wheel"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"base_link" -> "joint_between_top_cylinder" [label="xyz: -0.4 0 0.7 \nrpy: 0 -0 0"]
+"joint_between_top_cylinder" -> "between_top_cylinder"
+"base_link" -> "joint_hold_box1" [label="xyz: 0 0 0.75 \nrpy: 0 -0 0"]
+"joint_hold_box1" -> "hold_box1"
+"base_link" -> "joint_hold_box2" [label="xyz: 0 0 1.43 \nrpy: 0 -0 0"]
+"joint_hold_box2" -> "hold_box2"
+"base_link" -> "joint_left_bottom_cylinder" [label="xyz: 0.25 -0.4 0.7 \nrpy: 0 -0 0"]
+"joint_left_bottom_cylinder" -> "left_bottom_cylinder"
+"base_link" -> "joint_left_bottom_wheel" [label="xyz: 0.5 -0.5 0 \nrpy: 0 -0 0"]
+"joint_left_bottom_wheel" -> "left_bottom_wheel"
+"base_link" -> "joint_left_top_wheel" [label="xyz: -0.5 -0.5 0 \nrpy: 0 -0 0"]
+"joint_left_top_wheel" -> "left_top_wheel"
+"base_link" -> "joint_right_bottom_cylinder" [label="xyz: 0.25 0.4 0.7 \nrpy: 0 -0 0"]
+"joint_right_bottom_cylinder" -> "right_bottom_cylinder"
+"base_link" -> "joint_right_bottom_wheel" [label="xyz: 0.5 0.5 0 \nrpy: 0 -0 0"]
+"joint_right_bottom_wheel" -> "right_bottom_wheel"
+"base_link" -> "joint_right_top_wheel" [label="xyz: -0.5 0.5 0 \nrpy: 0 -0 0"]
+"joint_right_top_wheel" -> "right_top_wheel"
+}
